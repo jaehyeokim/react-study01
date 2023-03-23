@@ -1,0 +1,43 @@
+//import React, {useState} from 'react';
+import Square from './Square';
+import "./Board.css";
+
+
+const Board = ({squares, onClick}) =>{
+  
+  //Square 컴포넌트에 내려주는 Prop 값 
+  const renderSquare=(i) =>{
+    return (
+        <Square 
+         value={squares[i]} 
+         onClick={()=> onClick(i)}
+        />
+    );
+  }
+
+  return (
+    // render하면... 위에 선언한 Square을 사용
+    <div className='board-wrapper'>
+       <div className='board-row'>
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+      </div>
+      
+      <div className='board-row'>
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      
+      <div className='board-row'>
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  )
+
+}
+export default Board
+
