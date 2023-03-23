@@ -43,7 +43,7 @@ function App(){
     const newHistory = history.slice(0, stepNumber+1);
    
     const newCurrent = newHistory[newHistory.length-1];
-
+  
     const newSquares = newCurrent.squares.slice(); // 배열을 새롭게 복사하기
     
      // 리턴값이 있거나, 
